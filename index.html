@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">  
-    <title>Tweet Quote</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>Random Quote Generator</header>
-      <div class="content">
-        <div class="quote-area">
-          <i class="fas fa-quote-left"></i>
-          <p class="quote">Joy is what happens to us when we allow ourselves to recognize how good things really are.</p>
-          <i class="fas fa-quote-right"></i>
-        </div>
-        <div class="author">
-          <span>__</span>
-          <span class="name">Marianne Williamson</span>
-        </div>
-      </div>
-      <div class="buttons">
-        <div class="features">
-          <ul>
-            <li class="copy"><i class="fas fa-copy"></i></li>
-            <li class="twitter"><i class="fab fa-twitter"></i></li>
-          </ul>
-          <button>New Quote</button>
-        </div>
-      </div>
+    <title>Tweet Quote</title>
+    <link rel="icon" type="image/png" href="pngtree-creative-company-logo-png-image_1197025-removebg-preview.png">
+
+    <!-- Twitter button icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodye">
+
+    <!-- Dark Mode Switch -->
+    <div class="theme-switch-wrapper">
+        <span id="toggle-icon">
+            <span class="toggle-text">Light Mode</span>
+            <i class="fas fa-sun"></i>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
     </div>
+
+    <div class="quote-container" id="quote-container">
+        <!-- Quote -->
+        <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+                <span id="quote"></span>           
+        </div>
+        <!-- Author -->
+        <div class="quote-author">
+            <span id="author"></span>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="twitter-button" id="twitter" title="Tweet This :)">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button id="new-quote">New Quote</button>
+        </div>
+    </div>
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+    <!-- Script -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
